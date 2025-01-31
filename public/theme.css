@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+#notification {
+    position: fixed;
+    top: -3em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    /* border: 2px solid rgb(87, 87, 87); */
+    border-radius: 1em;
+    padding: 0.6em 1.2em;
+    line-height: 1.3em;
+    font-weight: 500;
+    box-shadow: 0px 0px 20px 1px #000000c0;
+    z-index: 15;
+    color: #000;
+    opacity: 0;
+
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+
+    &::before {
+        vertical-align: middle;
+        content: "";
+        height: 0.5em;
+        width: 1.7em;
+        margin-right: 0.5em;
+        display: inline-block;
+        border-radius: 0.3em;
+        /* border: 2px solid rgb(255, 255, 255); */
+        background-color: #ec1010;
+    }
+}
+
+#notification.show {
+    animation-name: notification-enter;
+}
+
+@keyframes notification-enter {
+    0% {
+        opacity: 1;
+        top: 0em;
+    }
+    10% {
+        top: 3em;
+        transform: translateX(-50%);
+    }
+    85% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    100% {
+        top: 3em;
+        transform: translateX(0%);
+        opacity: 0;
+    }
+}
+
+#main {
+    box-sizing: border-box;
+    padding: 2em;
+}
+
+.heading-lined {
+    text-align: center;
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 5em;
+        background-color: #fff4;
+        display: block;
+        top: 50%;
+        left: 0;
+    }
+    &::after {
+        left: unset;
+        right: 0;
+    }
+}
+
+.btn-more {
+    color: #fffc;
+    border: none;
+    display: block;
+    text-decoration: none;
+    margin: auto;
+    border-radius: 1em;
+    padding: 0.6em 1.5em;
+    background-color: #fff1;
+    cursor: pointer;
+    width: fit-content;
+    line-height: 1.3em;
+
+    & > img {
+        vertical-align: middle;
+        margin-left: 1em;
+        height: 1em;
+    }
+}
+
+.empty-note:empty::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff8;
+    content: "Not Available";
+}

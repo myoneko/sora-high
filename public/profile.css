@@ -1,0 +1,222 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    width: 100vw;
+    color: white;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+body {
+    --element-color: #cdcdcd;
+}
+
+#main {
+    width: 100%;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--element-color);
+    background-image: linear-gradient(320deg, #000, #000000d8);
+    /* background-image: linear-gradient(155deg, #0f3904, #000); */
+
+    & > section {
+        padding: 0 2em;
+    }
+}
+
+h1 {
+    background-image: url(assets/codeBg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 2em;
+    font-style: italic;
+    padding: 0.4em;
+    padding-bottom: 0.8em;
+    margin-bottom: 0.5em;
+    color: #717171;
+}
+
+#details {
+    display: flex;
+    gap: 2em;
+
+    & > img {
+        height: 250px;
+        width: 200px;
+        border-radius: 0px 0px 30px 30px;
+        background-color: white;
+        object-fit: cover;
+    }
+
+    & > table {
+        border-spacing: 0;
+        table-layout: fixed;
+        & tr {
+            &:nth-child(odd) {
+                background-color: #fff1;
+            }
+            & > td {
+                padding-inline: 0.5em;
+                &:nth-child(1) {
+                    color: #fffc;
+                }
+            }
+        }
+    }
+}
+
+#attendance {
+    margin: 1.5em 0;
+    display: flex;
+    gap: 3em;
+    & > table {
+        table-layout: fixed;
+        border-spacing: 5px;
+        &:nth-child(1) {
+            opacity: 0.5;
+        }
+        & tr {
+            & > th {
+                border: white;
+                font-size: 10px;
+                text-overflow: clip;
+                width: 20px;
+                height: 15px;
+                margin: 5px;
+            }
+            & > td {
+                margin: 5px;
+                height: 10px;
+                border-width: 8px;
+                background-color: white;
+                border-radius: 3px;
+                &:nth-last-child(-n + 2) {
+                    background-color: #fff8;
+                }
+            }
+        }
+    }
+}
+
+#notes > p {
+    margin: 0.8em 0;
+    border-radius: 0.8em;
+    min-height: 5em;
+    min-width: 300px;
+    background-color: #fff1;
+    position: relative;
+
+    &:empty::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff8;
+        content: "Not Available";
+    }
+}
+
+#attendance > img {
+    background-color: #0008;
+    border-radius: 1em;
+    cursor: pointer;
+    flex-grow: 0;
+    padding: 1em;
+    width: 0.7em;
+    min-height: 5em;
+    object-fit: contain;
+    height: 100%;
+    align-self: center;
+}
+
+#skills > h2 {
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 5em;
+        background-color: #fff4;
+        display: block;
+        top: 50%;
+        left: 0;
+    }
+    &::after {
+        left: unset;
+        right: 0;
+    }
+}
+
+#skills > section:nth-child(4) {
+    display: flex;
+    gap: 1em;
+}
+
+#stats,
+#stat-inc {
+    display: flex;
+    gap: 2em;
+
+    & > table {
+        table-layout: fixed;
+        border-spacing: 0;
+        & tr {
+            height: 1.8em;
+            & > td {
+                padding-inline: 1em;
+            }
+        }
+    }
+}
+
+#stats {
+    align-items: center;
+
+    & > div {
+        position: relative;
+
+        & > svg {
+            position: absolute;
+            inset: 35px;
+        }
+    }
+
+    & > div > svg > path {
+        stroke-opacity: 0;
+        transition: 0.3s;
+    }
+
+    & > div:hover > svg > path {
+        stroke-opacity: 0.5;
+    }
+}
+
+#stat-inc {
+    border: 2px solid #fff2;
+    border-radius: 1em;
+    padding: 1.5em 1em;
+    max-width: 300px;
+    margin: 0 auto 3em;
+    & > table tr {
+        /* &:nth-child(odd) {
+            background-color: #fff1;
+        } */
+        & > td:nth-child(1) {
+            padding-right: 2em;
+        }
+        & > td:nth-child(n + 2) {
+            text-align: right;
+        }
+        & > td > img {
+            height: 1.4em;
+        }
+    }
+}

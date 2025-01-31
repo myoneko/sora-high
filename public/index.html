@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sora High</title>
+        <link rel="stylesheet" href="theme.css" />
+        <link rel="stylesheet" href="home.css" />
+    </head>
+    <body>
+        <span id="notification">Profile Not Found</span>
+        <main id="main">
+            <section id="search">
+                <label for="">ID Code</label>
+                <div><input type="text" placeholder="xxx-xxx" maxlength="6" pattern="\d*" /><button>Go</button></div>
+                <label for="">Name</label>
+                <div><input type="text" placeholder="Nakamura Haruka" pattern="[a-zA-Z0-9\s]{0,30}" /></div>
+                <section id="results">
+                    <div class="anmtrg1">
+                        <img src="assets/skel-profile.png" />
+                        <h3></h3>
+                        <h4></h4>
+                        <a href="#"></a>
+                    </div>
+                    <div class="anmtrg1">
+                        <img src="assets/skel-profile.png" />
+                        <h3></h3>
+                        <h4></h4>
+                        <a href="#"></a>
+                    </div>
+                    <div class="anmtrg1">
+                        <img src="assets/skel-profile.png" />
+                        <h3></h3>
+                        <h4></h4>
+                        <a href="#"></a>
+                    </div>
+                    <div class="anmtrg1">
+                        <img src="assets/skel-profile.png" />
+                        <h3></h3>
+                        <h4></h4>
+                        <a href="#"></a>
+                    </div>
+                    <!-- <div>
+                        <img src="assets/profile.jfif" alt="Profile" />
+                        <h3>Nakamura Haruka</h3>
+                        <h4>00007</h4>
+                        <a href="#">Character sheet <img src="assets/right-arrow.png" alt=">" /></a>
+                    </div> -->
+                </section>
+            </section>
+
+            <section id="details">
+                <h2 class="heading-lined">Details</h2>
+                <div>
+                    <img src="assets/skel-profile.png" alt="Profile" class="det-fld" />
+                    <table>
+                        <tr>
+                            <td style="min-width: 8.5em">Name</td>
+                            <td class="det-fld" style="min-width: 10em"></td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td class="det-fld"></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td class="det-fld"></td>
+                        </tr>
+                        <tr>
+                            <td>Class</td>
+                            <td class="det-fld"></td>
+                        </tr>
+                        <tr>
+                            <td>Elemental Affinity</td>
+                            <td class="det-fld"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Birthday</td>
+                            <td class="det-fld"></td>
+                        </tr>
+                        <tr>
+                            <td>Contact Number</td>
+                            <td class="det-fld"></td>
+                        </tr>
+                        <tr>
+                            <td>Constellation</td>
+                            <td class="det-fld"></td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Notes</h3>
+                <p class="empty-note"></p>
+                <section>
+                    <a href="" class="det-fld btn-more">View character sheet<img src="assets/down-arrowhead.png" /></a>
+                    <button class="btn-more">Clear Tab</button>
+                </section>
+            </section>
+        </main>
+        <script src="home.js" type="module"></script>
+    </body>
+</html>
