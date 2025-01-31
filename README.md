@@ -16,8 +16,8 @@ npm install
 npm run setup
 ```
 
--   Import `setup/import.sql` into the MySQL Database
--   Update/configure `.env` file with new credentials
+-   Import `/setup/import.sql` into the MySQL Database
+-   Update/configure `/.env` file with new credentials
 
 <br>
 
@@ -30,4 +30,4 @@ npm start
 ```
 
 Sora-High is serverd at `http://localhost:3000/`  
-you may change the `SERVER_PORT` in `.env`
+you may change the `SERVER_PORT` in `/.env`
