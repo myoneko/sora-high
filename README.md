@@ -13,7 +13,6 @@
 
 ```shell
 npm install
-npm run setup
 ```
 
 -   Import `/setup/import.sql` into the MySQL Database
