@@ -7,10 +7,10 @@ const path = require("path");
 // Constants
 const port = process.env.SERVER_PORT || 3000;
 const dbConfig = {
-    host: process.env.DB_HOST || "localhost",
-    user: process.env.DB_USER || "your_db_user",
-    password: process.env.DB_PASS || "your_db_password",
-    database: process.env.DB_NAME || "your_db_name",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
 };
 
 // MySQL connection pool
