@@ -18,6 +18,7 @@ npm run setup
 
 -   Import `/setup/import.sql` into the MySQL Database
 -   Update/configure `/.env` file with new credentials
+    -   `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`
 
 <br>
 
